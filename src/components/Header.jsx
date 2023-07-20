@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
@@ -11,8 +10,7 @@ import {
   useDisclosure,
   VStack,
   HStack,
-  Center,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'; //Center, DrawerFooter
 import { Link } from 'react-router-dom';
 import { BiMenuAltLeft } from 'react-icons/bi';
 const Header = () => {
@@ -37,7 +35,7 @@ const Header = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>VIDEO HUB</DrawerHeader>
+          <DrawerHeader>MEDIA CENTER</DrawerHeader>
           <DrawerBody>
             <VStack alignItems={'flex-start'}>
               <Button
@@ -80,7 +78,11 @@ const Header = () => {
               <Button onClick={onClose} colorScheme="purple">
                 <Link to={'/login'}>Log In</Link>
               </Button>
-              <Button onClick={onClose} colorScheme="whatsapp">
+              <Button
+                onClick={onClose}
+                colorScheme="whatsapp"
+                variant={'outline'}
+              >
                 <Link to={'/signup'}>Sign Up</Link>
               </Button>
             </HStack>
